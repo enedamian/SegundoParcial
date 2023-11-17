@@ -8,7 +8,7 @@ def exportar_a_csv():
     """
     Exporta los datos de sucursales a un archivo CSV.
     """
-    with open(ruta_archivo_sucursales, 'w', newline='') as csvfile:
+    with open(ruta_archivo_sucursales, 'w', newline='', encoding="utf8") as csvfile:
         campo_nombres = ['id', 'nombre de sucursal', 'contraseña_admin','ciudad']
         writer = csv.DictWriter(csvfile, fieldnames=campo_nombres)
         writer.writeheader()
@@ -22,7 +22,7 @@ def importar_datos_desde_csv():
     global sucursales
     global id_sucursal
     sucursales = []  # Limpiamos la lista de sucursales antes de importar desde el archivo CSV
-    with open(ruta_archivo_sucursales, newline='') as csvfile:
+    with open(ruta_archivo_sucursales, newline='', encoding="utf8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Convertimos el ID de cadena a entero

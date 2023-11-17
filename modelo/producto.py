@@ -99,7 +99,7 @@ def exportar_a_csv():
     """
     Exporta los datos de productos a un archivo CSV.
     """
-    with open(ruta_archivo_productos, 'w', newline='') as csvfile:
+    with open(ruta_archivo_productos, 'w', newline='', encoding="utf8") as csvfile:
         campo_nombres = ['id', 'nombre de producto', 'descripcion','precio']
         writer = csv.DictWriter(csvfile, fieldnames=campo_nombres)
         writer.writeheader()
@@ -113,7 +113,7 @@ def importar_datos_desde_csv():
     global productos
     global id_producto
     productos = []  # Limpiamos la lista de productos antes de importar desde el archivo CSV
-    with open(ruta_archivo_productos, newline='') as csvfile:
+    with open(ruta_archivo_productos, newline='', encoding="utf8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Convertimos el ID de cadena a entero
