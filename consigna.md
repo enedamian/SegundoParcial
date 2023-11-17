@@ -18,4 +18,4 @@
 
 4. Cree las rutas POST,PUT y DELETE para gestionar los recursos de sucursales. Implemente los metodos correspondientes en el controlador y las funciones en los modelos para realizar las operaciones CRUD sobre la coleccion de sucursales. Agregue validaciónes para que las rutas funcionen correctamente.
 
-5. Corrija los errores en las rutas y validaciones implementadas para Productos, agregue lo que falta para ofrecer la funcionalidad completa sobre Productos.
+5. Corrija los errores en las rutas y validaciones implementadas para Productos, agregue en los archivos de la API todo lo que falta para ofrecer la funcionalidad completa sobre Productos.
